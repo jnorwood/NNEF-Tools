@@ -8,6 +8,8 @@ option(ENABLE_TESTS "Enable tests" ON)
 if (${ENABLE_TESTS})
     enable_testing()
 endif()
+set(FETCHCONTENT_QUIET OFF)
+
 
 FetchContent_Declare(
   flatbuffer

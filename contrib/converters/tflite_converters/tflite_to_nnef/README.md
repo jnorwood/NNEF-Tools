@@ -18,7 +18,9 @@ It is tested in the gitbash shell on Windows.
 ## Installation
 Clone this repository to your computer and execute the following shell commands:
 ```sh
-cd NNEF-Tools/contrib/converters/tflite_converters/tflite_to_nnef
+cd NNEF-Tools
+git checkout tflite_to_nnef
+cd  contrib/converters/tflite_converters/tflite_to_nnef
  
 mkdir build
 cd build
@@ -38,6 +40,7 @@ cmake -G"Visual Studio 15 2017 Win64" ..
  
 ## Usage
 the CMakeLists.txt has examples that can execute with ctest
+the download progress can be turned off by commenting out the set(FETCHCONTENT_QUIET OFF) line in CMakeLists.txt
 tflite_to_nnef quantized_filename.tflite output_path
 creates a graph.nnef, graph.quant and subdirectories with the weight and bias .dat quantized binary files
 ```sh
